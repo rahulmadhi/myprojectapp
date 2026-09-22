@@ -1,0 +1,20 @@
+#navbar {
+  height: 75px;
+  border: 2px solid red;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#navbar img {
+  height: 60px;
+}
+
+#navbar div {
+  height: 75px;
+  width: 400px;
+  justify-content: space-evenly;
+  align-items: center;
+  display: flex;
+}
