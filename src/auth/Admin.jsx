@@ -1,12 +1,34 @@
-import React, { useState } from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import axiosInstance from "../helpers/axiosInstance";
 
 const Admin = () => {
   let [username, setUsername] = useState();
   let [password, setPassword] = useState();
+  let [adminAuth, setAdminAuth] = useState();
+  let navigate = useNavigate();
+
+  useEffect(() => {
+    axiosInstance
+      .get("/admin")
+      .then(x => setAdminAuth(x.data))
+      .catch(err => err);
+  }, []);
 
   let handleSubmit = e => {
     e.preventDefault();
-    console.log(username, password);
+
+    let usernamedb = adminAuth[0].username;
+    let pwddb = adminAuth[0].password;
+
+    if (username == usernamedb && password == pwddb) {
+      toast.success("Admin logged in successfully");
+      navigate("/");
+    } else {
+      toast.error("Please check admin credentials");
+    }
   };
   return (
     <div>
@@ -26,7 +48,7 @@ const Admin = () => {
           <label htmlFor="password">PASSWORD</label>
           <input
             id="password"
-            type="text"
+            type="password"
             onChange={e => {
               setPassword(e.target.value);
             }}

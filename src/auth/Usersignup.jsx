@@ -1,7 +1,11 @@
+import axios from "axios";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import axiosInstance from "../helpers/axiosInstance";
 
 const Usersignup = () => {
+  let navigate = useNavigate();
   let [userData, setUserData] = useState({});
 
   let handleChange = e => {
@@ -10,7 +14,10 @@ const Usersignup = () => {
 
   let handleSubmit = e => {
     e.preventDefault();
-    console.log(userData);
+    let payload = userData;
+    axiosInstance.post("/user", payload);
+    toast.success(`Registration successfull`);
+    navigate("/userlogin");
   };
   return (
     <div>
@@ -18,15 +25,28 @@ const Usersignup = () => {
         <h2>USER SIGNUP </h2>
         <div className="items">
           <label htmlFor="fname"> First Name :</label>
-          <input id="fname" type="text" name="fname" onChange={handleChange} />
+          <input
+            required
+            id="fname"
+            type="text"
+            name="fname"
+            onChange={handleChange}
+          />
         </div>
         <div className="items">
           <label htmlFor="lname"> Last Name :</label>
-          <input id="lname" type="text" name="lname" onChange={handleChange} />
+          <input
+            required
+            id="lname"
+            type="text"
+            name="lname"
+            onChange={handleChange}
+          />
         </div>
         <div className="items">
           <label htmlFor="mobile"> Mobile :</label>
           <input
+            required
             id="mobile"
             type="text"
             name="mobile"
@@ -35,15 +55,28 @@ const Usersignup = () => {
         </div>
         <div className="items">
           <label htmlFor="email"> Email :</label>
-          <input id="email" type="text" name="email" onChange={handleChange} />
+          <input
+            required
+            id="email"
+            type="text"
+            name="email"
+            onChange={handleChange}
+          />
         </div>
         <div className="items">
           <label htmlFor="uname"> Username :</label>
-          <input id="uname" type="text" name="uname" onChange={handleChange} />
+          <input
+            required
+            id="uname"
+            type="text"
+            name="uname"
+            onChange={handleChange}
+          />
         </div>
         <div className="items">
           <label htmlFor="password"> Password :</label>
           <input
+            required
             id="password"
             type="password"
             name="password"
@@ -53,6 +86,7 @@ const Usersignup = () => {
         <div className="items">
           <label htmlFor="cpassword"> Confirm Password :</label>
           <input
+            required
             id="cpassword"
             type="password"
             name="cpassword"

@@ -4,11 +4,13 @@ import Home from "./Home";
 import Admin from "./auth/Admin";
 import Userlogin from "./auth/Userlogin";
 import Usersignup from "./auth/Usersignup";
+import { ToastContainer, toast } from "react-toastify";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 const App = () => {
   return (
     <div>
+      <ToastContainer/>
       <Router>
         <Nav />
         <Routes>
