@@ -1,13 +1,31 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import axiosInstance from "../helpers/axiosInstance";
+import { toast } from "react-toastify";
 
 const Userlogin = () => {
   let [username, setUsername] = useState();
   let [password, setPassword] = useState();
 
+  let navigate = useNavigate();
+
   let handleSubmit = e => {
     e.preventDefault();
-    console.log(username, password);
+
+    axiosInstance.get("/user").then(x => {
+      let data = x.data;
+      let info = data.find(x => {
+        return x.uname == username && x.password == password;
+      });
+
+      if (info) {
+        toast.success(`${username} logged in successfully`);
+        navigate("/");
+      } else {
+        toast.error("invalid username or password ");
+        navigate("/userlogin");
+      }
+    });
   };
   return (
     <div>

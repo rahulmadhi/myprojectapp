@@ -1,8 +1,14 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import STYLE from "./resources/nav.module.css";
 
 const Nav = () => {
+  let navigate = useNavigate();
+  let [authToken, setAuthToken] = useState();
+  useEffect(() => {
+    let token = localStorage.getItem("token");
+    setAuthToken(token);
+  }, [authToken]);
   return (
     <div id={STYLE.navbar}>
       <div>
@@ -16,6 +22,18 @@ const Nav = () => {
       <div>
         <Link to={"/adminlogin"}>ADMIN</Link>
         <Link to={"/userlogin"}>USER</Link>
+        {authToken == "true" ? (
+          <button
+            onClick={() => {
+              localStorage.clear();
+              window.location.assign("/");
+            }}
+          >
+            LOGOUT
+          </button>
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );

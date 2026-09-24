@@ -25,6 +25,7 @@ const Admin = () => {
 
     if (username == usernamedb && password == pwddb) {
       toast.success("Admin logged in successfully");
+      localStorage.setItem("token", true);
       navigate("/");
     } else {
       toast.error("Please check admin credentials");

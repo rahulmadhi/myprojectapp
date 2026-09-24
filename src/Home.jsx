@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import AdminDashboard from "./auth/AdminDashboard";
 
 const Home = () => {
-  return <div>Home</div>;
+  let [authToken, setAuthToken] = useState();
+
+  useEffect(() => {
+    let token = localStorage.getItem("token");
+    setAuthToken(token);
+    console.log(token);
+  }, [authToken]);
+
+  return <div>{authToken?<AdminDashboard/> : <> HOME PAGE</> }</div>;
 };
 
 export default Home;
