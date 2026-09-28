@@ -1,0 +1,96 @@
+{
+  "user": [
+    {
+      "fname": "CHACHA",
+      "lname": "BOY",
+      "mobile": "9999999999",
+      "email": "chachaisaboy@hotmail.com",
+      "uname": "chacha",
+      "password": "chacha",
+      "cpassword": "chacha",
+      "id": 1
+    },
+    {
+      "fname": "Muthu",
+      "lname": "Naveen",
+      "mobile": "7383738377",
+      "email": "muthu@lakalaka.com",
+      "uname": "muthu",
+      "password": "muthu",
+      "cpassword": "muthu",
+      "id": 2
+    },
+    {
+      "fname": "Ranjith",
+      "lname": "BOY",
+      "mobile": "8292837388",
+      "email": "ranjith@gmail.com",
+      "uname": "ranjith",
+      "password": "ranjith",
+      "cpassword": "ranjith",
+      "id": 3
+    },
+    {
+      "fname": "arfath",
+      "lname": "khan",
+      "mobile": "7383738377",
+      "email": "arfath@gmail.com",
+      "uname": "arfath",
+      "cpassword": "arfath",
+      "password": "arfath",
+      "id": 4
+    },
+    {
+      "fname": "Hruthik",
+      "lname": "Roshan",
+      "mobile": "839383948",
+      "email": "roshan@gmail.lakalaka.com",
+      "uname": "roshan",
+      "password": "roshan",
+      "cpassword": "roshan",
+      "id": 5
+    },
+    {
+      "fname": "CHACHA",
+      "lname": "BOY",
+      "mobile": "9999999999",
+      "email": "chachaisaboy@hotmail.com",
+      "uname": "chacha",
+      "password": "chacha",
+      "cpassword": "chacha",
+      "id": 6
+    }
+  ],
+  "admin": [
+    {
+      "username": "rahul",
+      "password": 1234
+    }
+  ],
+  "products": [
+    {
+      "pname": "Ice Cream",
+      "pdesc": "very cold icecream ",
+      "pprice": "120",
+      "pqty": "100",
+      "paddr": "https://carveyourcraving.com/wp-content/uploads/2021/06/chocolate-icecream-in-an-icecream-maker.jpg",
+      "id": 1
+    },
+    {
+      "pname": "soap",
+      "pdesc": "very nice soap",
+      "pprice": "20",
+      "pqty": "1000",
+      "paddr": "https://m.media-amazon.com/images/I/61JYmCklwvL._AC_UF1000,1000_QL80_.jpg",
+      "id": 2
+    },
+    {
+      "pname": "iphone",
+      "pdesc": "very nice phone",
+      "pprice": "150000",
+      "pqty": "2",
+      "paddr": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcT3OQVCz_QoGzUdjvHuALIRKGGxPglz8xse7exMo-EcDwtKq-6Ew__H_IQDkRjhz-49cmEMHANjLW5lfXZvcT1Pw9cmmLga_Jkf0a5hxbll9lKaWj8sImBsxioYZDfcfUZl7kI95nM&usqp=CAc",
+      "id": 3
+    }
+  ]
+}
