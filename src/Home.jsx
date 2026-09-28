@@ -10,7 +10,7 @@ const Home = () => {
     console.log(token);
   }, [authToken]);
 
-  return <div>{authToken?<AdminDashboard/> : <> HOME PAGE</> }</div>;
+  return <div>HOME</div>;
 };
 
 export default Home;

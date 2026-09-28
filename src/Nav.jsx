@@ -4,11 +4,8 @@ import STYLE from "./resources/nav.module.css";
 
 const Nav = () => {
   let navigate = useNavigate();
-  let [authToken, setAuthToken] = useState();
-  useEffect(() => {
-    let token = localStorage.getItem("token");
-    setAuthToken(token);
-  }, [authToken]);
+  let token = window.localStorage.getItem("token");
+
   return (
     <div id={STYLE.navbar}>
       <div>
@@ -22,7 +19,7 @@ const Nav = () => {
       <div>
         <Link to={"/adminlogin"}>ADMIN</Link>
         <Link to={"/userlogin"}>USER</Link>
-        {authToken == "true" ? (
+        {token == "true" ? (
           <button
             onClick={() => {
               localStorage.clear();

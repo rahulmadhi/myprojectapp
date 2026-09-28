@@ -5,10 +5,13 @@ const AdminSidebar = () => {
     <div id="adminsidebar">
       <h2>ADMIN DASHBOARD</h2>
       <div>
-        <Link to={"/viewproducts"}>VIEW PRODUCTS</Link>
+        <Link to={"viewproducts"}>VIEW PRODUCTS</Link>
       </div>
       <div>
-        <Link to={"/viewusers"}>VIEW USERS</Link>
+        <Link to={"addproducts"}>ADD PRODUCTS </Link>
+      </div>
+      <div>
+        <Link to={"viewusers"}>VIEW USERS</Link>
       </div>
     </div>
   );

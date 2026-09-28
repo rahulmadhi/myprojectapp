@@ -1,30 +1,30 @@
 import React, { useEffect, useState } from "react";
 import axiosInstance from "./helpers/axiosInstance";
 
-const Viewproducts = () => {
-  let [products, setProducts] = useState([]);
+const Viewusers = () => {
+  let [users, setUsers] = useState([]);
 
   useEffect(() => {
     axiosInstance
-      .get("/products")
-      .then(x => setProducts(x.data))
+      .get("/user")
+      .then(x => setUsers(x.data))
       .catch(err => err);
   }, []);
   return (
     <div>
       <div id="container">
-        {products.map(x => {
+        {users.map(x => {
           return (
             <div id="cards">
               <img
                 style={{ height: "200px", width: "200px" }}
-                src={x.paddr}
+                src={`https://api.dicebear.com/10.x/lorelei/svg?seed=user-${x.uname}`}
                 alt=""
               />
-              <h3>Product Name : {x.pname}</h3>
-              <h3 style={{ textAlign: "center" }}>Product Desc : {x.pdesc}</h3>
-              <h3>Product Price. : Rs .{x.pprice}</h3>
-              <h3>Product Qty : {x.pqty}</h3>
+              <h2 style={{color:"red"}}>{x.id}</h2>
+              <h3>Name :{x.uname}</h3>
+              <h3>Phone : {x.mobile}</h3>
+              <h3>{x.email}</h3>
               <div>
                 <button>EDIT</button>
                 <button>DELETE</button>
@@ -37,4 +37,4 @@ const Viewproducts = () => {
   );
 };
 
-export default Viewproducts;
+export default Viewusers;
