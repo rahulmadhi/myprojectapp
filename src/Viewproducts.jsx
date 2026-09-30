@@ -22,7 +22,7 @@ const Viewproducts = () => {
                 alt=""
               />
               <h3>Product Name : {x.pname}</h3>
-              <h3 style={{ textAlign: "center" }}>Product Desc : {x.pdesc}</h3>
+            ₹  <h3 style={{ textAlign: "center" }}>Product Desc : {x.pdesc}</h3>
               <h3>Product Price. : Rs .{x.pprice}</h3>
               <h3>Product Qty : {x.pqty}</h3>
               <div>

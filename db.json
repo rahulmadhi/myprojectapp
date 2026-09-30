@@ -1,33 +1,31 @@
 {
   "user": [
     {
-      "fname": "CHACHA",
-      "lname": "BOY",
-      "mobile": "9999999999",
-      "email": "chachaisaboy@hotmail.com",
-      "uname": "chacha",
+      "fname": "chacha",
+      "lname": "pro  max",
+      "mobile": "989289288",
+      "email": "chacha@amazon.com",
       "password": "chacha",
       "cpassword": "chacha",
+      "uname": "chacha",
       "id": 1
     },
     {
       "fname": "Muthu",
       "lname": "Naveen",
-      "mobile": "7383738377",
+      "mobile": "9282928299",
       "email": "muthu@lakalaka.com",
-      "uname": "muthu",
+      "uname": "muthunaveen",
       "password": "muthu",
       "cpassword": "muthu",
       "id": 2
     },
     {
-      "fname": "Ranjith",
-      "lname": "BOY",
-      "mobile": "8292837388",
-      "email": "ranjith@gmail.com",
-      "uname": "ranjith",
-      "password": "ranjith",
-      "cpassword": "ranjith",
+      "fname": "",
+      "lname": "",
+      "mobile": "",
+      "email": "",
+      "uname": "",
       "id": 3
     },
     {

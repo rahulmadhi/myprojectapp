@@ -12,6 +12,7 @@ import AdminDashboard from "./auth/AdminDashboard";
 import Viewproducts from "./Viewproducts";
 import Viewusers from "./Viewusers";
 import Addproduct from "./Addproduct";
+import Updateuser from "./auth/Updateuser";
 const App = () => {
   return (
     <div>
@@ -28,6 +29,7 @@ const App = () => {
           </Route>
           <Route path="/userlogin" element={<Userlogin />} />
           <Route path="/usersignup" element={<Usersignup />} />
+          <Route path="/updateuser/:id" element={<Updateuser />} />
         </Routes>
       </Router>
     </div>
